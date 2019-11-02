@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Create a dummy user program
+      run: echo "int main() { return 0; }" > /tmp/user_program.cpp
+    - name: Test the program
+      run: ./run.sh /tmp/user_program.cpp --no-update
