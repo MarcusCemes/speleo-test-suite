@@ -22,3 +22,6 @@ if [ -f "$file" ] ; then
     . "$file"
 fi
 done
+
+# Run program logic
+banner
