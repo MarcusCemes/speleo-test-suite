@@ -26,3 +26,4 @@ done
 # Run program logic
 banner
 update "$noUpdateArg" "$userProgramArg"
+checkRequirements
