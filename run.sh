@@ -27,3 +27,4 @@ done
 banner
 update "$noUpdateArg" "$userProgramArg"
 checkRequirements
+compile "$userProgramArg"
