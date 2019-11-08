@@ -4,7 +4,7 @@ COMPILE_ARGS="-std=c++11 -Wall -Wextra -O3 -fvisibility-inlines-hidden -pedantic
 function compile() {
 
   # Check the an argument was provided
-  if [ -z "$1" ] || [ ! -r "$1" ]; then
+  if [ -z "$1" ]; then
     echo "$1"
     log "${WARN} No source file was provided\n"
     log "Usage: ${BOLD}./run.sh ../path/to/source.cpp${RESET}\n"
@@ -12,8 +12,9 @@ function compile() {
   fi
 
   # Check that the source exists
-  if ! [ -r "$1" ]; then
-    log "${ERROR} Cannot read provided source file: ${BOLD}$1${RESET}"
+  if [ ! -r "$1" ]; then
+    log "${ERROR} Cannot read provided source file:"
+    log "   ${BOLD}$1${RESET}"
     log "${INFO} Make sure that relative/absolute path is correct\n"
     exit 1
   fi

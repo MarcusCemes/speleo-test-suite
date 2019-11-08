@@ -3,10 +3,14 @@
 # Strict execution
 set -u
 
-VERSION="2.0.0"
+VERSION="2.0.1"
 
 # Parse args
-userProgramArg=$(realpath "${1:-.}")
+if [ -n "${1:-}" ]; then
+  userProgramArg=$(realpath "$1")
+else
+  userProgramArg=""
+fi
 noUpdateArg="${2:-}"
 
 # Set the working directory to the script location
