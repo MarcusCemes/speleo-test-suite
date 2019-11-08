@@ -16,7 +16,7 @@
 
 <br />
 
-<img width="600" src="https://gistcdn.githack.com/MarcusCemes/854b9eead943ec8aeb7ed17e203f4239/raw/a4fe838cb2c61120d0a056fcdde7255df4db102a/speleo-test-suite-demo.svg?raw" alt="An example of usage">
+<img width="600" src="https://gistcdn.githack.com/MarcusCemes/854b9eead943ec8aeb7ed17e203f4239/raw/7931faa3d7e302d83135d86bd2d7f8c6434518bc/speleo-test-suite-demo.svg" alt="An example of usage">
 
 <br />
 <br />
@@ -25,7 +25,8 @@
 [Prerequisites](#prerequisites) &nbsp;**•**&nbsp;
 [Installation](#installation) &nbsp;**•**&nbsp;
 [Usage](#usage) &nbsp;**•**&nbsp;
-[Performance Analysis](#performance-analysis)
+[Performance Analysis](#performance-analysis) &nbsp;**•**&nbsp;
+[Updating](#updating)
 
 </div>
 
