@@ -33,15 +33,15 @@
 
 ## Preface
 
-This test suite is strongly derived from the C++ *ColoReduce MT-2018* project. It is *strongly recommended* to understand the C++ build/debug process, and use this only as a helper to double-check your work. Experiment with your own build/test scripts!
+This test suite is derived from the C++ *ColoReduce MT-2018* project. It is *strongly recommended* to understand the C++ build/debug process, and use this only as a helper to double-check your work. Experiment with your own build/test scripts!
 
 While providing out-of-the-box support for the *Speleo* project, the build/test scripts can easily be modified to support most simple C++ projects.
 
 ### ✅ What this does
 
-- 🛠️ Compiles your program with the official C++ compilation tool and compilation flags
+- 🛠️ Compiles your program with the official C++ compilation tool and [compilation flags](lib/compiler.sh)
 - 🤔 Compares the output *and* execution time of your program against the reference program
-- 🤨 Calculates a fairly harsh score for your program to give you the best chance of success in the official submission
+- 🤨 Judges you.
 
 ### ❌ What this doesn't do
 
@@ -53,7 +53,7 @@ While providing out-of-the-box support for the *Speleo* project, the build/test 
 
 ## Prerequisites
 
-This tool is purely written in Bash, and works universally on most Linux systems. The only required dependencies are the `g++`, `script` and `time` commands.
+This tool is purely written in Bash, and works universally on most Linux systems (and probably also on WSL/emulators). The only required dependencies are the `g++`, `script` and `time` commands.
 
 ```bash
 $ sudo apt install g++
@@ -67,7 +67,7 @@ The recommended way to grab a copy of the test suite is to run `git clone`.
 ```bash
 $ git clone https://github.com/MarcusCemes/speleo-test-suite.git
 ```
-<div align="center"><sub>Type this in a terminal (without the "$") where you would like to download the suite</sub></div><br />
+<div align="center"><sub>Type this in a terminal (without the "$") to download the suite</sub></div><br />
 
 If you don't have `git`, you can also use the `Clone or download` → `Download ZIP` button at the top of this page. This will not support updates.
 
@@ -82,7 +82,7 @@ $ ./run.sh ../path/to/source.cpp
 
 You may need to add execute permissions with `chmod +x run.sh`
 
-</sub></div>
+</sub></div><br />
 
 This will compile your C++ code with the official compilation flags and stricter syntax enforcement, before executing the binary against each test and running the performance analysis.
 
@@ -122,15 +122,23 @@ If you have messed something up, you can revert all local changes and re-synchro
 ```bash
 $ git reset --hard origin/master
 ```
-<div align="center"><sub>⚠ This will delete ALL modifications you may have made! Be warned! ⚠</sub></div>
+<div align="center"><sub>⚠ This will delete ALL modifications you may have made! Be warned! ⚠</sub></div><br />
 
-To skip updates altogether, you can do use the `./run.sh code.cpp --no-update`. If you are making changes to the test suite code, it may be safer to run `git pull` yourself in case you run into any merge conflicts.
+To skip updates altogether, such as when making your own changes to avoid merge conflicts, you can do pass a second parameter as shown below. You can manually update by running `git pull`.
+
+```bash
+$ ./run.sh code.cpp --no-update
+```
 
 ## Contributing
 
-This was written as my own collection of automation scripts, which I decided consequently unify and share with others due to the amount of work I put into it.
+This was written as my own collection of automation scripts, which I decided unify, document and share with others as a result of the amount of work I put into it.
 
 Got an idea? Create an [issue][link-issue] or submit a [pull request][link-pull-request].
+
+## Disclaimer
+
+This is in no way an official evaluation, just a handy helper to make your life a bit easier. Don't rely solely on this.
 
 ## License
 

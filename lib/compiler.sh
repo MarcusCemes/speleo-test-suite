@@ -1,4 +1,4 @@
-COMPILE_ARGS="-std=c++11 -Wall -Wextra -O3 -fvisibility-inlines-hidden -pedantic"
+COMPILE_ARGS="-std=c++11 -Wall -Wextra -pedantic -O3"
 
 # Compile the user's program
 function compile() {

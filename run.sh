@@ -3,7 +3,7 @@
 # Strict execution
 set -u
 
-VERSION="2.0.1"
+VERSION="2.0.2"
 
 # Parse args
 if [ -n "${1:-}" ]; then
